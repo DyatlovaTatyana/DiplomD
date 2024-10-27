@@ -10,7 +10,7 @@ class HomePage(BasePage):
 
     # Локатор для сервера диплома
     def server_diplom_locator(self):
-        return By.XPATH, f'//div[text()="СерверДилом"]'
+        return By.XPATH, f'//div[@class="childWrapper_f90abb childWrapperNoHoverBg_f90abb acronym_f90abb"]'
 
     # Локатор для основного канала
     def channel_locator(self):
