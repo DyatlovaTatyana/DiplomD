@@ -29,6 +29,7 @@ def init_driver(request):
 
     # Логинимся
     login_page.login_user()
+    time.sleep(5)
 
     # Заходим на сервер диплом
     home_page.clic_to_server_diplow()
