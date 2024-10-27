@@ -29,7 +29,10 @@ def init_driver(request):
 
     # Логинимся
     login_page.login_user()
+    time.sleep(5)
 
+    print(driver.current_url)
+    # assert driver.current_url == 'https://discord.com/channels/@me'
     home_page.clic_to_server_diplom()
     time.sleep(5)
     # Переходим в канал "4"
