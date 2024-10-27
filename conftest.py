@@ -8,10 +8,10 @@ from base_page import BasePage
 @pytest.fixture(scope="class")
 def init_driver(request):
     #Инициализация драйвера
-    options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
-    driver = webdriver.Chrome(options=options)
-    # driver = webdriver.Chrome()
+    # options = webdriver.ChromeOptions()
+    # options.add_argument('--headless')
+    # driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome()
     driver.implicitly_wait(10)
     driver.maximize_window()
     request.cls.driver = driver
