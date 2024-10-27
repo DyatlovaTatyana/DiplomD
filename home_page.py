@@ -10,7 +10,7 @@ class HomePage(BasePage):
 
     # Локатор для сервера диплома
     def server_diplom_locator(self):
-        return By.XPATH, f'//div[@class="listItem_c96c45"]//div[@class="blobContainer_a5ad63 selected_a5ad63"]'
+        return By.XPATH, f'//div[@class="childWrapper_f90abb childWrapperNoHoverBg_f90abb acronym_f90abb"]'
 
     # Локатор для основного канала
     def channel_locator(self):
@@ -102,7 +102,7 @@ class HomePage(BasePage):
         # return self.find_element(self.message_locator())
 
     # Метод для клика по Серверу диплома
-    def clic_to_server_diplow(self):
+    def clic_to_server_diplom(self):
         # self.find_element(self.server_diplom_locator())
         self.click(self.server_diplom_locator())
 
