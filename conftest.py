@@ -32,7 +32,7 @@ def init_driver(request):
     time.sleep(5)
 
     # Заходим на сервер диплом
-    home_page.clic_to_server_diplow()
+    home_page.clic_to_server_diplom()
     time.sleep(3)
     # Переходим в канал "4"
     home_page.clic_to_channel()
