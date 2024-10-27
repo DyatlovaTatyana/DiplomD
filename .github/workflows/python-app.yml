@@ -27,6 +27,9 @@ jobs:
         pip install allure-pytest
         pip install selenium
         pip install PyAutoGUI
+        pip install webdriver-manager
+        sudo apt-get install -y xvfb
+        pip install --upgrade pyautogui mouseinfo
 
         
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -36,10 +39,17 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Run Xvfb
+      run: |
+        Xvfb :99 -screen 0 1024x768x24 &
+        export DISPLAY=:99
+        
     - name: Test with pytest
       run: |
         pytest tests_all.py --alluredir=allure-results
       continue-on-error: true
+      
 
     - name: Load test report history
       uses: actions/checkout@v3
