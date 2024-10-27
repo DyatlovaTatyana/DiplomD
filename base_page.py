@@ -9,11 +9,11 @@ class BasePage:
         self.driver = driver
         self.base_url = 'https://discord.com/login'
 
-    def find_element(self, locator, time=5):
+    def find_element(self, locator, time=20):
         return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
                                                       message=f"Can't find element by locator {locator}")
 
-    def click(self, locator, time=5):
+    def click(self, locator, time=15):
         element = self.find_element(locator, time)
         element.click()
 
