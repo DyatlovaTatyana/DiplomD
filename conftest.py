@@ -7,7 +7,7 @@ from base_page import BasePage
 
 @pytest.fixture(scope="class")
 def init_driver(request):
-    Инициализация драйвера
+    #Инициализация драйвера
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
