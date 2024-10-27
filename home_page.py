@@ -11,7 +11,7 @@ class HomePage(BasePage):
 
     # Локатор для сервера диплома
     def server_diplom_locator(self):
-        return By.XPATH, f'//*[@id="app-mount"]/div[2]/div[1]/div[1]/div/div[2]/div/div/nav/ul/div[2]/div[3]/div[1]/div[2]/div/div/svg/foreignObject/div/div'
+        return By.XPATH, f'//div[@class="childWrapper_f90abb childWrapperNoHoverBg_f90abb acronym_f90abb"]'
 
     # Локатор для канала 4
     def channel_locator(self):
