@@ -33,10 +33,10 @@ def init_driver(request):
 
     # Заходим на сервер диплом
     home_page.clic_to_server_diplow()
-    time.sleep(5)
+    time.sleep(3)
     # Переходим в канал "4"
     home_page.clic_to_channel()
-    time.sleep(5)
+    time.sleep(3)
 
     yield driver
 
