@@ -6,7 +6,6 @@ from base_page import BasePage
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 # Пишем какое сообщение хотим отправить
 text = "Привет, пора приступать к диплому, торопись! А еще меня отправили из пучарм"
 text_mention = "Привет @BEE-diploma#7805 как твое ничего?"
@@ -47,9 +46,9 @@ class TestMessage:
         # assert self.driver.current_url == 'https://discord.com/channels/@me'
         # Переходим в канал "4"
         home_page.clic_to_server_diplom()
-        # time.sleep(3)
+        time.sleep(3)
         home_page.clic_to_channel()
-        # time.sleep(3)
+        time.sleep(3)
 
         # Отправка сообщения
         home_page.send_message_in_channel(text)
