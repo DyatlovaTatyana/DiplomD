@@ -21,7 +21,7 @@ class TestMessage:
         base_page = BasePage(self.driver)
 
         # Открытие страницы
-        base_page.open_page()
+        base_page.open_page('https://discord.com/channels/@me')
         time.sleep(5)
 
         # Логинимся
