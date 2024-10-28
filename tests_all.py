@@ -35,8 +35,6 @@ class TestMessage:
         # time.sleep(3)
         home_page.clic_to_channel()
         # time.sleep(3)
-        # # Инициализация страницы
-        # home_page = HomePage(self.driver)
 
         # Отправка сообщения
         home_page.send_message_in_channel(text)
