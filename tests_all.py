@@ -14,6 +14,21 @@ text_mention_non_exist_user = "Привет @пупкин как твое нич
 
 @pytest.mark.usefixtures("init_driver", "base_url")
 class TestMessage:
+        def test_login_me(self, base_url):
+        # Инициализация страницы
+        login_page = LoginPage(self.driver)
+        base_page = BasePage(self.driver)
+
+        base_page.open_page()
+        time.sleep(5)
+        login_page.login_user()
+        time.sleep(5)
+        login_page.click_login()
+        time.sleep(10)
+        print("Текущий урл: ", self.driver.current_url)
+        # Проверяем, что открылась страница с моими каналами
+        assert self.driver.current_url == 'https://discord.com/channels/@me'
+    
     def test_send_message(self, base_url):
         # Инициализация страницы
         login_page = LoginPage(self.driver)
