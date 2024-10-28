@@ -35,14 +35,14 @@ class TestMessage:
         home_page = HomePage(self.driver)
         base_page = BasePage(self.driver)
 
-        # Открытие страницы
-        base_page.open_page('https://discord.com/channels/@me')
-        time.sleep(5)
+        # # Открытие страницы
+        # base_page.open_page('https://discord.com/channels/@me')
+        # time.sleep(5)
 
-        # Логинимся
-        login_page.login_user()
-        time.sleep(5)
-        print("Текущий урл: ", self.driver.current_url)
+        # # Логинимся
+        # login_page.login_user()
+        # time.sleep(5)
+        # print("Текущий урл: ", self.driver.current_url)
         # Проверяем, что открылась страница с моими каналами
         # assert self.driver.current_url == 'https://discord.com/channels/@me'
         # Переходим в канал "4"
