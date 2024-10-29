@@ -23,8 +23,11 @@ class TestMessage:
         time.sleep(5)
         login_page.login_user()
         time.sleep(5)
+        self.driver.save_screenshot('screen1.png')
         login_page.click_login()
+        self.driver.save_screenshot('screen2.png')
         time.sleep(10)
+        self.driver.save_screenshot('screen3.png')
         print("Текущий урл: ", self.driver.current_url)
         # Проверяем, что открылась страница с моими каналами
         assert self.driver.current_url == 'https://discord.com/channels/@me'
