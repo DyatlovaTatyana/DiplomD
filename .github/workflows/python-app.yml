@@ -47,7 +47,7 @@ jobs:
         
     - name: Test with pytest
       run: |
-        xvfb-run -a pytest tests_all.py --alluredir=allure-results
+        xvfb-run -a pytest test_all.py --alluredir=allure-results
       continue-on-error: true
       
 
