@@ -23,9 +23,13 @@ class LoginPage(BasePage):
     def login_user(self):
         self.send_keys(self.login_input_locator(), "dyatlova1108@gmail.com")
         self.send_keys(self.password_input_locator(), "Dyatlova1108!")
-        self.click(self.login_user_button_locator())
+        # self.click(self.login_user_button_locator())
 
 
     # Метод для открытия страницы
     def open_login_page(self):
         self.open_page()
+
+
+    def click_login(self):
+        self.click(self.login_user_button_locator())
