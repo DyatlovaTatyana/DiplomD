@@ -19,7 +19,7 @@ class TestMessage:
         base_page = BasePage(self.driver)
 
         base_page.open_page()
-        time.sleep(5)
+        time.sleep(3)
         login_page.login_user()
         time.sleep(5)
         login_page.click_login()
